@@ -7,13 +7,22 @@ import 'state.dart';
 
 export 'candlestick_data.dart';
 
+/// A Simple candlestick chart. Supports smooth scroll and zoom.
 class SimpleCandlestickChart extends StatefulWidget {
+  /// The candlestick data list. newest data on the first.
   final List<CandlestickData> data;
+
+  /// Animation curve
+  final Curve curve;
+
+  /// Animation duration
+  final Duration transition;
+
+  /// Height of the volume chart
+  final double volumeHeight;
+
   final Color increaseColor;
   final Color decreaseColor;
-  final Curve curve;
-  final Duration transition;
-  final double volumeHeight;
   final double maxItemWidth;
   final double minItemWidth;
 

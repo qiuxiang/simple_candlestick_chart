@@ -1,18 +1,21 @@
 # simple_candlestick_chart
 
-A new flutter plugin project.
+A simple candlestick chart for flutter. Supports smooth scroll and zoom.
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+```dart
+import 'package:simple_candlestick_chart/simple_candlestick_chart.dart';
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+final data = [
+  CandlestickData(DateTime.parse('2020-01-01 09:15'), 3990.99, 3991.17, 3990.78, 3993.55, 12869.11),
+  CandlestickData(DateTime.parse('2020-01-01 09:00'), 3991.17, 3989.5, 3985.87, 3993.37, 13191.45),
+  ...
+];
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` under the same
-directory. You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+SimpleCandlestickChart(
+  data: data,
+  increaseColor: Colors.teal,
+  decreaseColor: Colors.redAccent,
+);
+```
