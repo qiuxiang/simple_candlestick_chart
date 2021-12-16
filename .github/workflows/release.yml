@@ -18,7 +18,8 @@ jobs:
         id: release
         env:
           GITHUB_TOKEN: ${{ github.token }}
-      - run: |
+      - name: Release
+        run: |
           echo '${{ secrets.CREDENTIALS_JSON }}' > $(which flutter | sed -r 's/bin\/flutter/.pub-cache\/credentials.json/')
           export version=$(echo ${{ steps.release.outputs.tag_name }} | sed s/v//)
           sed -i -r "s/version: .*/version: $version/" pubspec.yaml
@@ -26,5 +27,6 @@ jobs:
           git config --global user.name 7c00
           git config --global user.email i@7c00.cc
           git commit -am $version
-          git push
-          flutter pub publish -f
+      - uses: peter-evans/create-pull-request@v3
+      - name: Publish
+        run: flutter pub publish -f
