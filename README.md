@@ -1,4 +1,4 @@
-# simple_candlestick_chart
+# simple_candlestick_chart [![pub package](https://img.shields.io/pub/v/simple_candlestick_chart.svg)](https://pub.dartlang.org/packages/simple_candlestick_chart)
 
 A simple candlestick chart for flutter. Supports smooth scroll and zoom.
 
