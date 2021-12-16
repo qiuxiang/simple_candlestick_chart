@@ -1,9 +1,5 @@
 name: pages
-on:
-  push:
-    paths:
-      - lib
-      - example/lib
+on: [push]
 jobs:
   pages:
     runs-on: ubuntu-latest
