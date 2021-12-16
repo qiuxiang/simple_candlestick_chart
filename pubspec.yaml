@@ -1,6 +1,6 @@
 name: simple_candlestick_chart
 description: A simple candlestick chart for flutter. Supports smooth scroll and zoom.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/qiuxiang/simple_candlestick_chart
 
 environment:
