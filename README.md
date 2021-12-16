@@ -2,6 +2,8 @@
 
 A simple candlestick chart for flutter. Supports smooth scroll and zoom.
 
+https://user-images.githubusercontent.com/1709072/146329928-de47e1b1-71eb-42b1-85c5-a63a22c8a98d.mp4
+
 ## Usage
 
 ```dart
