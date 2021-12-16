@@ -28,5 +28,7 @@ jobs:
           git config --global user.email i@7c00.cc
           git commit -am $version
       - uses: peter-evans/create-pull-request@v3
+        with:
+          base: main
       - name: Publish
         run: flutter pub publish -f
