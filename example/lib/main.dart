@@ -32,7 +32,6 @@ class _AppState extends State<App> {
   @override
   void initState() {
     super.initState();
-    DateTime.parse('2020-01-01');
     rootBundle.loadString('asset/data.json').then((json) {
       CandlestickData map(item) => CandlestickData(
             DateTime.fromMillisecondsSinceEpoch(item['time'] * 1000),
@@ -62,6 +61,7 @@ class _AppState extends State<App> {
                 data: data,
                 increaseColor: Colors.teal,
                 decreaseColor: Colors.pinkAccent,
+                physics: const BouncingScrollPhysics(),
               ),
             ),
           ]),

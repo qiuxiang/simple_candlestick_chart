@@ -26,6 +26,9 @@ class SimpleCandlestickChart extends StatefulWidget {
   final double maxItemWidth;
   final double minItemWidth;
 
+  /// Scroll physics
+  final ScrollPhysics? physics;
+
   const SimpleCandlestickChart({
     Key? key,
     required this.data,
@@ -36,6 +39,7 @@ class SimpleCandlestickChart extends StatefulWidget {
     this.curve = Curves.easeOutCubic,
     this.transition = const Duration(milliseconds: 300),
     this.volumeHeight = 60,
+    this.physics,
   }) : super(key: key);
 
   @override
@@ -79,6 +83,7 @@ class _SimpleCandlestickChartState extends State<SimpleCandlestickChart> {
           child: CustomScrollView(
             controller: state.scrollView,
             scrollDirection: Axis.horizontal,
+            physics: widget.physics,
             reverse: true,
             slivers: [
               Obx(() {

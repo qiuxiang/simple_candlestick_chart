@@ -9,7 +9,7 @@ class ChartState extends GetxController {
   late final SimpleCandlestickChart widget;
   final data = <CandlestickData>[].obs;
   final scrollView = ScrollController();
-  final itemWidth = 10.0.obs;
+  final itemWidth = 12.0.obs;
   final high = 0.0.obs;
   final low = double.infinity.obs;
   final maxVolume = 0.0.obs;
